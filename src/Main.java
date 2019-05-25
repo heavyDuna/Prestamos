@@ -11,6 +11,8 @@ public class Main {
 		Persona p2 = new Persona("20", "juanito");
 		ComparadorFecha c = new ComparadorFecha();
 		ComparadorCifNombre c2 = new ComparadorCifNombre();
+		SolicitudPrestamo sol = new SolicitudPrestamo(20,f3 );
+		SolicitudPrestamo sol2 = new SolicitudPrestamo(10,f );
 
 		Lista l = new Lista();
 		// l.addOrdenadamente(f4, c);
@@ -20,11 +22,18 @@ public class Main {
 		l2.addOrdenadamente(f, c);
 
 		// System.out.println(l);
+		
+		Banco b = new Banco("BBVA");
+		
 
 		PrestamoCliente pc = new PrestamoCliente(p, 1200, l, 200, f3);
-		//System.out.println(pc);
-
 		PrestamoCliente pc2 = new PrestamoCliente(p2, 1000, l2, 300, f);
+		//System.out.println(pc);
+		b.add(sol,pc);
+		b.add(sol2, pc2);
+		System.out.println(b);
+
+
 		
 		//pc.solicitantes();
 
@@ -34,7 +43,7 @@ public class Main {
 
 		//System.out.println(pco);
 		
-		pco.solicitantes();
+		//pco.solicitantes();
 
 		/*try {
 			pco.pago();

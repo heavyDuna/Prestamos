@@ -74,7 +74,6 @@ public class PrestamoCliente extends SolicitudPrestamo implements Prestable {
 		return t;
 	}
 
-	@Override
 	public String toString() {
 		return "PrestamoCliente [solicitante=" + solicitante + ", valor=" + valor + ", fechasPago=" + fechasPago + "]";
 	}
