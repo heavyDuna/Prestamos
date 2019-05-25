@@ -74,6 +74,12 @@ public class PrestamoCliente extends SolicitudPrestamo implements Prestable {
 		return t;
 	}
 
+	public int volumenPrestado() {
+
+		return this.valor;
+
+	}
+
 	public String toString() {
 		return "PrestamoCliente [solicitante=" + solicitante + ", valor=" + valor + ", fechasPago=" + fechasPago + "]";
 	}

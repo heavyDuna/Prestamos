@@ -84,9 +84,27 @@ public class PrestamoCooperativa extends SolicitudPrestamo implements Prestable 
 
 		}
 
-		//System.out.println(t2);
+		// System.out.println(t2);
 
 		return t2;
+	}
+
+	public int volumenPrestado() {
+
+		int suma = 0;
+		PrestamoCliente p;
+		Iterator it = this.cooperativa.iterator();
+
+		while (it.hasNext()) {
+
+			p = (PrestamoCliente) it.next();
+			suma = suma + p.volumenPrestado();
+
+		}
+		
+		//System.out.println(total);
+
+		return suma;
 	}
 
 	public String toString() {

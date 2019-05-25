@@ -7,12 +7,4 @@ public class PrestamoFinalizado extends Exception {
 
 	}
 
-	/*
-	 * public PrestamoFinalizado(double sobreCoste) {
-	 * 
-	 * super();
-	 * 
-	 * }
-	 */
-
 }

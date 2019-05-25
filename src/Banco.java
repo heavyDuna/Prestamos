@@ -9,7 +9,6 @@ public class Banco {
 	private String nombre;
 	private Map prestamos;
 
-	
 	public Banco(String nombre) {
 
 		this.nombre = nombre;
@@ -22,27 +21,31 @@ public class Banco {
 
 	}
 
+	public int volumenPrestado() {
+
+		int total = 0;
+
+		SolicitudPrestamo sol;
+		Prestable pres;
+		Set s = this.prestamos.keySet();
+		Iterator it = s.iterator();
+
+		while (it.hasNext()) {
+
+			sol = (SolicitudPrestamo) it.next();
+			pres = (Prestable) this.prestamos.get(sol);
+
+			total = total + pres.volumenPrestado();
+		}
+		
+		//System.out.println(total);
+
+		return total;
+
+	}
+
 	public String toString() {
 		return "Banco [nombre=" + nombre + ", prestamos=" + prestamos.toString() + "]";
 	}
-
-	/*
-	 * public Banco(String nombre) {
-	 * 
-	 * SolicitudPrestamo sol; Prestable pres; Set s = this.prestamos.keySet();
-	 * Iterator it = s.iterator();
-	 * 
-	 * while (it.hasNext()) {
-	 * 
-	 * sol = (SolicitudPrestamo) it.next(); pres = (Prestable)
-	 * this.prestamos.get(sol);
-	 * 
-	 * pres.toString();
-	 * 
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
 
 }
